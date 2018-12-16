@@ -39,7 +39,7 @@ int main (int argc, char *argv[]) {
         if ( i > commandno ) {
             cmd = (char *)realloc((void *)cmd, mem_len);
         } else { //i == commandno
-            cmd = (char *)malloc(mem_len);
+            cmd = (char *)calloc(mem_len, 1);
         }
 
         strcat(cmd, argv[i]);
